@@ -32,9 +32,8 @@ jobs:
            **/.git*
            **/.git*/**
            **/node_modules/**
-           *lock.json
           server-dir: ./techbysj.mwerothewebmaker.com/
-          # dangerous-clean-slate : true
+          dangerous-clean-slate : true
 
 
       - name: 📂 Deploy to server 2
