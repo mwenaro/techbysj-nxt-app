@@ -5,7 +5,7 @@ on:
 name: 🚀 Deploy dev-site on push on the dev branch
 jobs:
   web-deploy:
-    name: 🎉 Deploy1
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
       - name: 🚚 Get latest code
@@ -34,5 +34,5 @@ jobs:
            **/node_modules/**
            *lock.json
           server-dir: ./techbysj.mwerothewebmaker.com/
-          dangerous-clean-slate : true
+          # dangerous-clean-slate : true
   
