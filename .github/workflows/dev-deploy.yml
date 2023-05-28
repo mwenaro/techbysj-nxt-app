@@ -49,5 +49,5 @@ jobs:
            **/.git*/**
            **/node_modules/**
            
-          server-dir: ./pokemons.mwerothewebmaker.com/
+          server-dir: ./pokemons.mwerothwebmaker.com/
           # dangerous-clean-slate : true
