@@ -8,25 +8,17 @@
   --background-end-rgb: 255, 255, 255;
 
 
-  /* Theme colors */
-  --primary: #ff2dcc;
-  /* --nautral : # */
+  /* blue */
+ --primary : #0d0452; 
+ /* gold */
+ --accent:#daa520;
+ /* while  */
+--white:#ffff;
+ /* natural - black */
+ --neutral:#0000;
+
+
+
+
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
