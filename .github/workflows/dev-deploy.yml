@@ -21,7 +21,7 @@ jobs:
           npm install
           npm run build
 
-      - name: 📂 Sync  files
+      - name: 📂 Sync  file to server 1
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
           server: ${{ secrets.ftp_server }}
@@ -35,4 +35,19 @@ jobs:
            *lock.json
           server-dir: ./techbysj.mwerothewebmaker.com/
           # dangerous-clean-slate : true
-  
+
+
+      - name: 📂 Deploy to server 2
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
+        with:
+          server: ${{ secrets.ftp_server }}
+          username: ${{ secrets.ftp_user }}
+          password: ${{ secrets.ftp_pwd }}
+          exclude: |
+           **/.vscode/**
+           **/.git*
+           **/.git*/**
+           **/node_modules/**
+           
+          server-dir: ./pokemons.mwerothewebmaker.com/
+          dangerous-clean-slate : true
