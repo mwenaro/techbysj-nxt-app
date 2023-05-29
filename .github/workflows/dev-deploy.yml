@@ -1,6 +1,6 @@
 on:
   push:
-    branches: dev
+    branches: dev2
 
 name: 🚀 Deploy dev-site on push on the dev branch
 jobs:
