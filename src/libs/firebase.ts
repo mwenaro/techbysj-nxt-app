@@ -9,6 +9,7 @@ import {
   ref,
   child,
   onValue,
+  push,
 } from "firebase/database";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -40,17 +41,18 @@ export {
   db
 }
 
-export function saveData(table: string, data: any) {
-  const id = new Date().getTime();
-  set(ref(db, `${table}/${id}`), data)
-    .then((snapshot) => {
-      console.log({ snapshot });
-      console.log(table + " Successfully created");
-    })
-    .catch((error) => {
-      console.log({ error });
-      console.log("Something went wrong, check data and try again");
-    });
+export async function saveData(table: string, data: any) {
+  try {
+    let dbRef = ref(db, table);
+  let idRef = await push(dbRef)
+  let id:any = idRef.toString().split('/').pop()
+   await set(idRef, {...data, id})
+
+  return  id
+  } catch (error:any) {
+    console.log({error:error.message})
+    return false;
+  }
 }
 
 

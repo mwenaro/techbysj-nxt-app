@@ -3,7 +3,7 @@ name: Node App Deployment
 on:
   push:
     branches:
-      - dev
+      - dev5
 
 jobs:
   deploy:
