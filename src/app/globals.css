@@ -9,13 +9,18 @@
 
 
   /* blue */
- --primary : #0d0452; 
+ /* --primary : #0d0452;  */
+ --primary : 13, 4, 82; 
  /* gold */
- --accent:#daa520;
+ /* --accent:#daa520; */
+ --accent: 218, 165, 32;
+
  /* while  */
---white:#ffff;
+/* --white:#ffff; */
+--white: 255, 255, 255;
  /* natural - black */
- --neutral:#0000;
+ /* --neutral:#0000; */
+ --neutral: 17, 24, 39;
 
 
 

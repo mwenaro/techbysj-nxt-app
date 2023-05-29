@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Image } from "../atoms";
+import { LOGO_PIC } from "@/assets/images";
+import { Img } from "../atoms";
 
 export default function Navbar() {
   const navLinks = [
@@ -12,16 +13,16 @@ export default function Navbar() {
   ];
   return (
     <nav className="w-full flex bg-white flex-col md:flex-row items-center justify-between p-4 px-8 font-light">
-      <Link href={""}>
-        {/* <Image src={""} alt={""} /> */}
-        Logo
+      <Link href={"/"} className="w-40 h-20">
+        <Img src={LOGO_PIC} alt={"Logo Picture"} className="" />
+
       </Link>
 
       <ul className="w-full md:w-fit flex flex-col md:flex-row items-center gap-10 text-xl">
-        {navLinks.map((link,indx) => {
- if(indx ===navLinks.length-1) return <li key={link.href}><button className="bg-blue-900/100 text-white rounded-md p-3 px-6">{link.title}</button></li>
- return<li key={link.href}>{link.title}</li>
-})}
+        {navLinks.map((link, indx) => {
+          if (indx === navLinks.length - 1) return <li key={link.href} className="w-full md:w-fit"><button className="bg-skin-primary text-white hover:bg-skin-accent rounded-md p-3 px-6 w-full md:w-fit">{link.title}</button></li>
+          return <li key={link.href} className="w-full md:w-fit">{link.title}</li>
+        })}
       </ul>
     </nav>
   );
