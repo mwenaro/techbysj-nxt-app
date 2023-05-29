@@ -1,0 +1,42 @@
+name: Node App Deployment
+
+on:
+  push:
+    branches:
+      - dev3
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Stop Node app
+        run: |
+          # Replace <cpanel-username>, <cpanel-domain>, and <app-root> with your actual values
+          ssh <cpanel-username>@<cpanel-domain> "cloudlinux-selector stop --interpreter nodejs --app-root <app-root>"
+
+      - name: Upload app to cPanel
+        run: |
+          # Replace <cpanel-username>, <cpanel-domain>, and <app-root> with your actual values
+          scp -r ./* <cpanel-username>@<cpanel-domain>:<app-root>
+
+      - name: Install Node packages
+        run: |
+          # Replace <cpanel-username>, <cpanel-domain>, and <app-root> with your actual values
+          ssh <cpanel-username>@<cpanel-domain> "cd <app-root> && npm ci"
+
+      - name: Start Node app
+        run: |
+          # Replace <cpanel-username>, <cpanel-domain>, <app-root>, and <start-command> with your actual values
+          ssh <cpanel-username>@<cpanel-domain> "cloudlinux-selector start --interpreter nodejs --app-root <app-root> --start-command '<start-command>'"
