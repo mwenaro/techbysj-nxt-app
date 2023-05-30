@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <div className="mb-6">
+        <input
+          type="text"
+          placeholder="Your Name"
+          name="clientName"
+          className="text-body-color border-[f0f0f0] focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
+        />
+      </div>
+
+      <div className="mb-6">
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          className="text-body-color border-[f0f0f0] focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
+        />
+      </div>
+
+      <div className="mb-6">
+        <input
+          type="text"
+          name="phone"
+          placeholder="Your Phone"
+          className="text-body-color border-[f0f0f0] focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
+        />
+      </div>
+
+      <div className="mb-6">
+        <textarea
+          rows="{6}"
+          name="message"
+          placeholder="Your Message"
+          className="text-body-color border-[f0f0f0] focus:border-primary w-full resize-none rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
+        ></textarea>
+      </div>
+
+      <div>
+        <button
+          type="submit"
+          className="bg-primary border-primary w-full rounded border p-3 text-white bg-[#0d0452] hover:bg-[#daa520] transition hover:bg-opacity-90"
+        >
+          Send Message
+        </button>
+      </div>
+    </form>
+  </body>
+</html>

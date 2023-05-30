@@ -1,8 +1,15 @@
+import React from 'react'
+import { AboutSection, CoursesSection, ServicesSection } from './components/templates'
+import HeroSection from './components/templates/HeroSection'
 
-export default function Home() {
+export default function page() {
   return (
-   <div>
-   <h2 className="text-center bg-skin-accent text-white">The Site you have been looking for ?</h2>
-   </div>
+    <>
+    
+    <HeroSection />
+    <AboutSection />
+    <ServicesSection />
+    <CoursesSection />
+    </>
   )
 }
