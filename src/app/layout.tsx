@@ -1,8 +1,7 @@
 import { Footer, Header } from "./components";
 import "./globals.css";
-import { Inter } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+
 
 export const metadata = {
   title: "Techbysj - Official site",
@@ -16,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className="">
         <div className="">
           <Header />
           <main className="flex min-h-screen flex-col items-center justify-between p-24">
