@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { LOGO_PIC } from "@/assets/images";
 import { Img } from "../atoms";
+import { Logo } from "../molecules";
+
 
 export default function Navbar() {
   const navLinks: { title: string, href: string }[] = [
@@ -17,7 +19,8 @@ export default function Navbar() {
   return (
     <nav className="w-full flex h-20 flex-col md:flex-row items-center justify-between p-4 px-8 font-normal bg-white text-base">
       <Link href={"/"} className="w-40 h-20 flex justify-start items-center ">
-        <Img src={LOGO_PIC} alt={"Logo Picture"} className="" />
+        {/* <Img src={LOGO_PIC} alt={"Logo Picture"} className="" /> */}
+        <Logo />
 
       </Link>
 
