@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface CheckBoxProps {
   label: string;
@@ -7,7 +7,12 @@ interface CheckBoxProps {
   onChange: (checked: boolean) => void;
 }
 
-const CheckBox: React.FC<CheckBoxProps> = ({ label, name, checked, onChange }) => (
+const CheckBox: React.FC<CheckBoxProps> = ({
+  label,
+  name,
+  checked,
+  onChange,
+}) => (
   <div className="mb-4">
     <label htmlFor={name} className="text-gray-700 flex items-center">
       <input

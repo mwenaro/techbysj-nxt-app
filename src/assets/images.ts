@@ -1,4 +1,3 @@
-const  imagePath = "/assets/images";
+const imagePath = "/assets/images";
 
-
-export const LOGO_PIC = `${imagePath}/logo.png`
+export const LOGO_PIC = `${imagePath}/logo.png`;

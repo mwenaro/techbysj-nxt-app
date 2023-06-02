@@ -6,8 +6,6 @@ import {
   ServicesSection,
 } from "./components/templates";
 
-
-
 export default function page() {
   return (
     <>
@@ -15,9 +13,7 @@ export default function page() {
       <AboutSection />
       <ServicesSection />
       <CoursesSection />
-      <div>
-        
-      </div>
+      <div></div>
     </>
   );
 }

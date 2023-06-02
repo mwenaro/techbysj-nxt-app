@@ -3,10 +3,14 @@ import React, { ReactNode } from "react";
 interface TypographyProps {
   variant: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
   children: ReactNode;
-  className ?: string
+  className?: string;
 }
 
-const Typography: React.FC<TypographyProps> = ({ variant, children, className }) => {
+const Typography: React.FC<TypographyProps> = ({
+  variant,
+  children,
+  className,
+}) => {
   const getTypographyClasses = (): string => {
     switch (variant) {
       case "h1":
@@ -32,7 +36,9 @@ const Typography: React.FC<TypographyProps> = ({ variant, children, className })
 
   // return <Tag>{children}</Tag>;
 
-  return <Tag className={`${getTypographyClasses()} ${className} `}>{children}</Tag>;
+  return (
+    <Tag className={`${getTypographyClasses()} ${className} `}>{children}</Tag>
+  );
 };
 
 export default Typography;

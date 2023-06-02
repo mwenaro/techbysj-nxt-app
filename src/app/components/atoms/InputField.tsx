@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface InputFieldProps {
   name: string;
@@ -6,7 +6,12 @@ interface InputFieldProps {
   placeholder?: string;
 }
 
-const InputField: React.FC<InputFieldProps> = ({ name, type, placeholder, ...rest }) => (
+const InputField: React.FC<InputFieldProps> = ({
+  name,
+  type,
+  placeholder,
+  ...rest
+}) => (
   <div className="mb-4">
     <input
       type={type}
