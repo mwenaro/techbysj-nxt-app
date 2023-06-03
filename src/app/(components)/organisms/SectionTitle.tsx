@@ -10,10 +10,7 @@ export default function SectionTitle({
   className,
 }: PropsWithChildren<IProps>) {
   return (
-    <Typography
-      variant="h2"
-      className={` capitalize ${className}`}
-    >
+    <Typography variant="h2" className={` capitalize ${className}`}>
       {children}
     </Typography>
   );

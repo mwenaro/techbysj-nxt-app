@@ -9,7 +9,18 @@
     "start": "NODE_ENV=production node server.js",
     "lint": "next lint",
     "format": "prettier --check --ignore-path .gitignore .",
-    "format:fix": "prettier --write --ignore-path .gitignore ."
+    "format:fix": "prettier --write --ignore-path .gitignore .",
+    "postinstall": "husky install",
+    "husky": {
+      "hooks": {
+        "pre-commit": "lint-staged"
+      }
+    },
+    "lint-staged": {
+      "*.{js,jsx}": [
+        "eslint '*/**/*.{js,jsx}' --fix"
+      ]
+    }
   },
   "dependencies": {
     "@types/node": "20.2.3",
@@ -34,6 +45,7 @@
   },
   "devDependencies": {
     "@types/react-scroll": "^1.8.7",
+    "husky": "^8.0.3",
     "prettier": "^2.8.8"
   }
 }

@@ -1,5 +1,4 @@
-import { WORKER_SELF_EXIT_CODE } from 'next/dist/server/lib/render-server';
-import {FaGamepad} from 'react-icons/fa'
+import { FaGamepad } from "react-icons/fa";
 
 const rightArrowIcon = (
   <svg
@@ -114,14 +113,22 @@ const dataTrendIcon = (
   </svg>
 );
 
-const gameIcon = <FaGamepad />
+const gamePadIcon = <FaGamepad />;
 //  || <IoLogoGameControllerB /> || <GrGamepad /> || <IoLogoGameControllerA />
 
-// const dababaseIcon =  <BsDatabaseFillCheck /> 
-{/* <BsDatabaseCheck /> */}
+// const dababaseIcon =  <BsDatabaseFillCheck />
+{
+  /* <BsDatabaseCheck /> */
+}
 
 // world BiWorld
-
+//graph BsFillFileBarGraphFill  BsFileBarGraphFill
+// marketing SiMarketo
+//Teacher GiTeacher
+//mobile FaMobileAlt FaMobileScreenButton
+//robot BsRobot FaRobot
+//Arrowback BsArrowLeftCircle
+//arrowForard BsArrowRightCircle
 
 interface IconProps {
   variant:
@@ -132,7 +139,8 @@ interface IconProps {
     | "training"
     | "dataTrend"
     | "design"
-    | "marketing";
+    | "marketing"
+    | "gamepad";
 
   className?: string;
 }
@@ -158,9 +166,11 @@ const Icon: React.FC<IconProps> = ({
         return designIcon;
       case "dataTrend":
         return dataTrendIcon;
+      case "gamepad":
+        return gamePadIcon;
 
       default:
-        return rightArrowIcon;
+        return <></>;
     }
   };
 

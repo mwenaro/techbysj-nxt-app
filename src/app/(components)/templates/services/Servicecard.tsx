@@ -1,4 +1,4 @@
-import { Typography } from "../../atoms";
+import { Icon, Typography } from "../../atoms";
 
 interface ServiceCardProps {
   icon: React.ReactNode;
@@ -14,7 +14,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   return (
     <div className="max-w-md mx-auto text-center">
       <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50 mx-auto sm:w-24 sm:h-24">
-        {icon}
+        {typeof icon == "string" ? <Icon variant={icon as any} /> : icon}
       </div>
       <Typography variant="h6" className="mb-3 text-xl font-bold leading-5">
         {title}

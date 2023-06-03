@@ -9,7 +9,7 @@ export const metadata = {
       rel: "icon",
       type: "image/png",
       sizes: "180x180",
-      url: "/favicon/apple-touch-icon.png"
+      url: "/favicon/apple-touch-icon.png",
     },
     {
       rel: "icon",

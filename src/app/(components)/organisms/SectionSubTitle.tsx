@@ -10,7 +10,10 @@ export default function SectionSubTitle({
   className,
 }: PropsWithChildren<IProps>) {
   return (
-    <Typography variant="h3" className={`font -semibold text-3xl  ${className}`}>
+    <Typography
+      variant="h3"
+      className={`font -semibold text-3xl  ${className}`}
+    >
       {children}
     </Typography>
   );

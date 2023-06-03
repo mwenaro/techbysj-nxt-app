@@ -1,6 +1,5 @@
-
 export interface IService {
-    title:string,
-    icon:React.ReactNode,
-    description:string
+  title: string;
+  icon: React.ReactNode;
+  description: string;
 }

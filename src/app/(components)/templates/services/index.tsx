@@ -24,8 +24,8 @@ const ServicesSection: React.FC<IServicesSectionProps> = ({
     <div className="grid gap-8 row-gap-10 lg:grid-cols-2">
       {services !== undefined && services.length > 0 ? (
         <>
-          {services.map((service: IService) => (
-            <ServiceCard {...service} />
+          {services.map((service: IService, indx: number) => (
+            <ServiceCard key={indx} {...service} />
           ))}
         </>
       ) : (

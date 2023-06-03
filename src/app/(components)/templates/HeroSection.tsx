@@ -2,12 +2,14 @@
 
 import { Typography } from "../atoms";
 import { CTAButton } from "../molecules";
+import { getImage } from "@/assets/images";
 
 export default function HeroSection() {
   return (
     <section
       id="home"
       className=" w-full  hero-image bg-no-repeat bg-right object-fit"
+      style={{ backgroundImage: `url(${getImage("/binary.png")}})` }}
     >
       <div className="bg-gradient-to-r from-skin-primary  w-full min-h-screen ">
         <div className="flex flex-col justify-center  items-center w-full  md:w-3/4 ">
