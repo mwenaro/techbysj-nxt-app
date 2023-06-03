@@ -121,7 +121,7 @@ export default function ContactSection() {
                 <div>
                   <button
                     type="submit"
-                    className="bg-primary border-primary w-full rounded border p-3 text-white bg-[#0d0452] hover:bg-[#daa520] transition hover:bg-opacity-90"
+                    className="bg-primary border-primary w-full rounded border p-3 text-white bg-[#0d0452] hover:bg-skin-accent   transition hover:bg-opacity-90"
                   >
                     Send Message
                   </button>

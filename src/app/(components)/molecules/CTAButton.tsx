@@ -16,7 +16,7 @@ const CTAButton: React.FC<CTAButtonProps> = ({
   className,
 }) => (
   <Button
-    className={`bg-skin-accent  ${className}`}
+    className={`bg-skin-accent     ${className}`}
     onClick={onClick}
     disabled={disabled}
   >

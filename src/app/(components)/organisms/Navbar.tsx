@@ -27,7 +27,7 @@ export default function Navbar() {
           if (indx === navLinks.length - 1)
             return (
               <li key={link.href} className="w-full md:w-fit">
-                <button className="bg-skin-primary text-white hover:bg-skin-accent rounded-md p-3 px-6 w-full md:w-fit">
+                <button className="bg-skin-primary text-white hover:bg-skin-accent    rounded-md p-3 px-6 w-full md:w-fit">
                   {link.title}
                 </button>
               </li>

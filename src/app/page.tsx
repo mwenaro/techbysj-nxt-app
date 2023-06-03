@@ -1,19 +1,15 @@
 import React from "react";
-import {
-  AboutSection,
-  CoursesSection,
-  Herosection,
-  ServicesSection,
-} from "./components/templates";
+import { CoursesSection, HeroSection, ServicesSection } from "./(components)";
+import AboutSection from "./(components)/templates/about";
 
-export default function page() {
+
+export default function Page() {
   return (
     <>
-      <Herosection />
-      <AboutSection />
+      <HeroSection />
+      <AboutSection imageUrl="/favicon.ico" />
       <ServicesSection />
       <CoursesSection />
-      <div></div>
     </>
   );
 }

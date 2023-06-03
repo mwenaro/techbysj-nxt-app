@@ -1,10 +1,16 @@
-import { Footer, Header } from "./components";
+import { Footer, Header } from "./(components)";
 import "./globals.css";
 
 export const metadata = {
   title: "Techbysj - Official site",
   description: "Techbysj official website",
   icons: [
+    {
+      rel: "icon",
+      type: "image/png",
+      sizes: "180x180",
+      url: "/favicon/apple-touch-icon.png"
+    },
     {
       rel: "icon",
       type: "image/png",
