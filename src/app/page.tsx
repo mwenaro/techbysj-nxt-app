@@ -1,5 +1,5 @@
 import React from "react";
-import { CoursesSection, HeroSection, ServicesSection } from "./(components)";
+import { ContactSection, CoursesSection, HeroSection, ServicesSection } from "./(components)";
 import AboutSection from "./(components)/templates/about";
 
 export default function Page() {
@@ -9,6 +9,7 @@ export default function Page() {
       <AboutSection imageUrl="/favicon.ico" />
       <ServicesSection />
       <CoursesSection />
+      <ContactSection />
     </>
   );
 }

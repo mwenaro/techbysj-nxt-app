@@ -3,7 +3,6 @@ import { CoursesSection, HeroSection, Icon } from "../(components)";
 import AboutSection from "../(components)/templates/about";
 import ServicesSection from "../(components)/templates/services";
 import { getImage } from "@/assets/images";
-import CourseCard from "../(components)/templates/courses/CourseCard";
 
 export default function page() {
   return (
@@ -13,14 +12,14 @@ export default function page() {
       <AboutSection imageUrl={getImage("/binary.png")} />
 
       <ServicesSection
-        services={[
-          {
-            title: "Web developement",
-            // icon: <Icon variant="design" className="text-skin-primary "/>,
-            icon: "dataTrend",
-            description: "We thoroughly cover html, css, javascript",
-          },
-        ]}
+        // services={[
+        //   {
+        //     title: "Web developement",
+        //     // icon: <Icon variant="design" className="text-skin-primary "/>,
+        //     icon: "dataTrend",
+        //     description: "We thoroughly cover html, css, javascript",
+        //   },
+        // ]}
       >
         {"Saum Mwero Hussien Yusra Amal Rashid Mangale Amina"
           .split(" ")

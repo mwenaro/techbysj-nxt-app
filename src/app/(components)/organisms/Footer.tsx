@@ -1,9 +1,15 @@
-import { Img } from "../atoms";
+import { LOGO_PIC } from '@/assets/images';
+import { Img } from '../atoms';
+import { SiteCopyRight } from '../molecules';
+interface FooterProps {
+  company?: string;
+  className?: string;
+}
 
 export default function Footer() {
   return (
     <footer>
-      <div className="px-4 pt-16 bg-[#0d0452] text-white   sm:max-w-xl min-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+      <div className="px-4 pt-16 bg-skin-primary text-white   sm:max-w-xl min-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
         <div className="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
           <div className="sm:col-span-2">
             <a
@@ -12,11 +18,7 @@ export default function Footer() {
               title="Company"
               className="inline-flex items-center"
             >
-              <Img
-                src="/static/media/logowhite.d8099912bb4ba6d711f6.png"
-                className="w-32 object-fit"
-                alt=""
-              />
+              <Img src={LOGO_PIC} className="h-16 aspect-square" alt="" />
             </a>
             <div className="mt-6 lg:max-w-sm">
               <p className="text-sm text-white">
@@ -131,11 +133,12 @@ export default function Footer() {
             </p>
           </div>
         </div>
-        <div className="flex flex-col-reverse justify-center pt-5 pb-10 border-t lg:flex-row">
+        {/* <div className="flex flex-col-reverse justify-center pt-5 pb-10 border-t lg:flex-row">
           <p className="text-sm text-white text-center">
             © Copyright 2023 Techbysj. All rights reserved.
           </p>
-        </div>
+        </div> */}
+        <SiteCopyRight />
       </div>
     </footer>
   );
