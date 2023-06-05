@@ -1,6 +1,5 @@
-// "use client"
-import { Icon, Img } from '../../atoms';
-import { SectionSubTitle, SectionTitle, SectionWrapper } from '../../organisms';
+
+import { SectionTitle, SectionWrapper } from '../../organisms';
 import Gallery from '../../organisms/Gallery';
 
 

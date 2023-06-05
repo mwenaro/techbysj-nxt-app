@@ -1,33 +1,38 @@
+'use client';
+import { Link as ScrollLink } from 'react-scroll';
 
-import { LOGO_PIC } from '@/assets/images';
-import { Img } from '../atoms';
 import { Logo } from '../molecules';
-import { Link } from 'react-scroll';
+
+const navLinks: { title: string; href: string }[] = [
+  { title: 'Home', href: 'home' },
+  { title: 'About us', href: 'about' },
+  { title: 'Services', href: 'services' },
+  { title: 'Courses', href: 'courses' },
+  { title: 'Contact', href: 'contact' },
+  { title: 'Learn', href: 'learn' },
+];
 
 export default function Navbar() {
-  const navLinks: { title: string; href: string }[] = [
-    { title: 'Home', href: '/' },
-    { title: 'About us', href: 'about' },
-    { title: 'Services', href: 'services' },
-    { title: 'Courses', href: 'courses' },
-    { title: 'Contact', href: 'contact' },
-    { title: 'Learn', href: 'learn' },
-  ];
-
   return (
     <nav className="w-full flex h-fit md:h-20 flex-col md:flex-row items-center justify-between  pb-6 px-6 pt-0 md:p-4 md:px-8 font-normal bg-white text-base">
-      <Link
-        href={'/'}
+      <ScrollLink
         className="h-20 flex justify-start items-center p-2 w-fit"
+        to={'home'}
+        smooth={true}
+        duration={500}
+        offset={-70} // Adjust the offset as needed to account for fixed headers or other elements
       >
         <Logo />
-      </Link>
+      </ScrollLink>
 
       <ul className="w-full md:w-fit flex flex-col md:flex-row items-center gap-5 md:gap-10 bg-inherit p-4 mb-5 sm:mb-0">
         {navLinks.map((link, indx) => {
           if (indx === navLinks.length - 1)
             return (
-              <li key={link.href} className="w-full md:w-fit hover:rounded-md hover:bg-slate-800">
+              <li
+                key={link.href}
+                className="w-full md:w-fit hover:rounded-md hover:bg-slate-800"
+              >
                 <button className="bg-skin-primary text-white hover:bg-skin-accent    rounded-md p-3 px-6 w-full md:w-fit">
                   {link.title}
                 </button>
@@ -35,14 +40,34 @@ export default function Navbar() {
             );
           if (link.title.toLocaleLowerCase().split(' ').includes('about'))
             return (
-              <li key={link.href} className="w-full md:w-fit hover:rounded-md hover:bg-slate-800">
-                <span>{link.title.split(' ')[0]}</span>
+              <li
+                key={link.href}
+                className="w-full md:w-fit hover:rounded-md hover:bg-slate-800"
+              >
+                <ScrollLink
+                  to={link.href}
+                  smooth={true}
+                  duration={500}
+                  offset={-70} // Adjust the offset as needed to account for fixed headers or other elements
+                >
+                  <span>{link.title.split(' ')[0]}</span>
+                </ScrollLink>
               </li>
             );
 
           return (
-            <li key={link.href} className="w-full md:w-fit hover:rounded-md hover:bg-slate-800">
-              <span>{link.title}</span>
+            <li
+              key={link.href}
+              className="w-full md:w-fit hover:rounded-md hover:bg-slate-800"
+            >
+              <ScrollLink
+                to={link.href}
+                smooth={true}
+                duration={500}
+                offset={-70} // Adjust the offset as needed to account for fixed headers or other elements
+              >
+                <span>{link.title}</span>
+              </ScrollLink>
             </li>
           );
         })}
