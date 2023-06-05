@@ -138,8 +138,8 @@ export default function ContactSection() {
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
+                      fillRule="evenodd"
+                      clipRule="evenodd"
                       d="M0 100C0 44.7715 0 0 0 0C55.2285 0 100 44.7715 100 100C100 100 100 100 0 100Z"
                       fill="#3056D3"
                     ></path>
@@ -939,7 +939,7 @@ export default function ContactSection() {
             </div>
           </div>
         </div>
-      </div>{" "}
+      </div>{' '}
       <div className="Toastify"></div>
     </section>
   );

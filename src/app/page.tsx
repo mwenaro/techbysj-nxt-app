@@ -1,6 +1,11 @@
-import React from "react";
-import { ContactSection, CoursesSection, HeroSection, ServicesSection } from "./(components)";
-import AboutSection from "./(components)/templates/about";
+import React from 'react';
+import {
+  ContactSection,
+  CoursesSection,
+  HeroSection,
+  ServicesSection,
+} from './(components)';
+import AboutSection from './(components)/templates/about';
 
 export default function Page() {
   return (

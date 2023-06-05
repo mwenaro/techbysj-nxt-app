@@ -1,4 +1,4 @@
-import { FaGamepad } from "react-icons/fa";
+import { FaGamepad } from 'react-icons/fa';
 const icons = {
   rightArrowIcon: (
     <svg
@@ -133,16 +133,16 @@ const icons = {
 
 interface IconProps {
   variant:
-    | "arrowRight"
-    | "arrowLeft"
-    | "web"
-    | "mobile"
-    | "training"
-    | "dataTrend"
-    | "design"
-    | "marketing"
-    | "gamepad"
-    | "";
+    | 'arrowRight'
+    | 'arrowLeft'
+    | 'web'
+    | 'mobile'
+    | 'training'
+    | 'dataTrend'
+    | 'design'
+    | 'marketing'
+    | 'gamepad'
+    | '';
 
   className?: string;
 }

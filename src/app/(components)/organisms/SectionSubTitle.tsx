@@ -1,5 +1,5 @@
-import { PropsWithChildren } from "react";
-import { Typography } from "../atoms";
+import { PropsWithChildren } from 'react';
+import { Typography } from '../atoms';
 
 interface IProps {
   className?: string;

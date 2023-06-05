@@ -1,5 +1,5 @@
-import { LOGO_PIC } from "@/assets/images";
-import { Img } from "../atoms";
+import { LOGO_PIC } from '@/assets/images';
+import { Img } from '../atoms';
 
 export default function Logo({ className }: { className?: string }) {
   return (

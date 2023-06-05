@@ -7,7 +7,7 @@ interface SiteCopyRightProps {
 
 const SiteCopyRight: React.FC<PropsWithChildren<SiteCopyRightProps>> = ({
   children,
-  company = "techbysj",
+  company = 'techbysj',
   className,
 }) => (
   <div
@@ -17,9 +17,8 @@ const SiteCopyRight: React.FC<PropsWithChildren<SiteCopyRightProps>> = ({
       <>{children}</>
     ) : (
       <p className="text-sm text-white text-center">
-        © Copyright {new Date().getFullYear()} {" "}
-        {company || 'yourcompanyname'}
-        . All rights reserved.
+        © Copyright {new Date().getFullYear()} {company || 'yourcompanyname'}.
+        All rights reserved.
       </p>
     )}
   </div>

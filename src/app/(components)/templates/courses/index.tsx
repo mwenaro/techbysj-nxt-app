@@ -1,12 +1,12 @@
-import { SectionSubTitle, SectionTitle, SectionWrapper } from "../../organisms";
-import CourseCard from "./CourseCard";
+import { SectionSubTitle, SectionTitle, SectionWrapper } from '../../organisms';
+import CourseCard from './CourseCard';
 
 const CoursesSection: React.FC = () => {
   return (
     <SectionWrapper sectionId="courses" className="bg-blue-50 dark:bg-gray-900">
       <div className="container px-6 py-10 mx-auto">
         <SectionTitle className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">
-          explore our <br /> awesome{" "}
+          explore our <br /> awesome{' '}
           <span className="underline decoration-blue-500">Courses</span>
         </SectionTitle>
         <SectionSubTitle className="mt-4 text-gray-500 xl:mt-6 dark:text-gray-300">

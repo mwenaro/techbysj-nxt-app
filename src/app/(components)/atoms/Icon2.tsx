@@ -1,4 +1,4 @@
-import { FaGamepad } from "react-icons/fa";
+import { FaGamepad } from 'react-icons/fa';
 
 const rightArrowIcon = (
   <svg
@@ -132,15 +132,15 @@ const gamePadIcon = <FaGamepad />;
 
 interface IconProps {
   variant:
-    | "arrowRight"
-    | "arrowLeft"
-    | "web"
-    | "mobile"
-    | "training"
-    | "dataTrend"
-    | "design"
-    | "marketing"
-    | "gamepad";
+    | 'arrowRight'
+    | 'arrowLeft'
+    | 'web'
+    | 'mobile'
+    | 'training'
+    | 'dataTrend'
+    | 'design'
+    | 'marketing'
+    | 'gamepad';
 
   className?: string;
 }
@@ -152,21 +152,21 @@ const Icon: React.FC<IconProps> = ({
 }) => {
   const getIconType = (): React.ReactNode => {
     switch (variant) {
-      case "arrowRight":
+      case 'arrowRight':
         return rightArrowIcon;
-      case "web":
+      case 'web':
         return webIcon;
-      case "mobile":
+      case 'mobile':
         return mobileIcon;
-      case "training":
+      case 'training':
         return trainingIcon;
-      case "marketing":
+      case 'marketing':
         return marketingIcon;
-      case "design":
+      case 'design':
         return designIcon;
-      case "dataTrend":
+      case 'dataTrend':
         return dataTrendIcon;
-      case "gamepad":
+      case 'gamepad':
         return gamePadIcon;
 
       default:

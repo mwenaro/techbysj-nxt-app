@@ -1,6 +1,6 @@
-import { IService } from "@/types";
-import { SectionSubTitle, SectionTitle, SectionWrapper } from "../../organisms";
-import ServiceCard from "./Servicecard";
+import { IService } from '@/types';
+import { SectionSubTitle, SectionTitle, SectionWrapper } from '../../organisms';
+import ServiceCard from './Servicecard';
 interface IServicesSectionProps {
   services?: any[];
   children?: React.ReactNode;

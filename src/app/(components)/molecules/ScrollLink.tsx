@@ -1,5 +1,5 @@
-import React from "react";
-import { JsxElement } from "typescript";
+import React from 'react';
+import { JsxElement } from 'typescript';
 
 export default function ScrollLink({
   path,

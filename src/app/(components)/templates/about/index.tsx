@@ -1,7 +1,7 @@
-import { Icon, Img } from "../../atoms";
-import { SectionSubTitle, SectionTitle, SectionWrapper } from "../../organisms";
+import { Icon, Img } from '../../atoms';
+import { SectionSubTitle, SectionTitle, SectionWrapper } from '../../organisms';
 
-import Mission from "./Mission";
+import Mission from './Mission';
 
 interface AboutSectionProps {
   imageUrl: string;

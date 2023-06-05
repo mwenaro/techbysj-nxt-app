@@ -1,5 +1,5 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
+import { initializeApp } from 'firebase/app';
 import {
   getDatabase,
   set,
@@ -10,18 +10,18 @@ import {
   child,
   onValue,
   push,
-} from "firebase/database";
+} from 'firebase/database';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyA1bNo7UVZxFniE6uu0eJHqTU8Bc4n10rk",
-  authDomain: "techbysj-app.firebaseapp.com",
-  projectId: "techbysj-app",
-  storageBucket: "techbysj-app.appspot.com",
-  messagingSenderId: "964510738443",
-  appId: "1:964510738443:web:e5cdba76c6e14d7699ff0e",
+  apiKey: 'AIzaSyA1bNo7UVZxFniE6uu0eJHqTU8Bc4n10rk',
+  authDomain: 'techbysj-app.firebaseapp.com',
+  projectId: 'techbysj-app',
+  storageBucket: 'techbysj-app.appspot.com',
+  messagingSenderId: '964510738443',
+  appId: '1:964510738443:web:e5cdba76c6e14d7699ff0e',
 };
 
 const app = initializeApp(firebaseConfig);
@@ -33,7 +33,7 @@ export async function saveData(table: string, data: any) {
   try {
     let dbRef = ref(db, table);
     let idRef = await push(dbRef);
-    let id: any = idRef.toString().split("/").pop();
+    let id: any = idRef.toString().split('/').pop();
     await set(idRef, { ...data, id });
 
     return id;

@@ -1,6 +1,6 @@
-"use client";
-import { ReactNode } from "react";
-import { Button } from "../atoms";
+'use client';
+import { ReactNode } from 'react';
+import { Button } from '../atoms';
 
 interface CTAButtonProps {
   children?: ReactNode;

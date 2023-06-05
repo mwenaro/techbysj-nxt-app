@@ -1,4 +1,4 @@
-export const imagePath = "/assets/images";
+export const imagePath = '/assets/images';
 
 export const getImage = (path: string) => `${imagePath}${path}`;
 
