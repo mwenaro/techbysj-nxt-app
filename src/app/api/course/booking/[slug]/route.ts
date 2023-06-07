@@ -1,7 +1,7 @@
 import { deleteData, getDataById, updateData } from '@/libs/firebase';
 import { NextResponse } from 'next/server';
 
-const table = "courses"
+const table = "course_booking"
 export async function GET(
   request: Request,
   { params }: { params: { slug: any } }

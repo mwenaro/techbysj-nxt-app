@@ -8,8 +8,12 @@ export async function GET(request: Request) {
       ? { data: payload.data }
       : { error: payload.error };
     return NextResponse.json(result);
+   
+
   };
   
+  
+
   let resp = await getData(table, callBack);
   return NextResponse.json(resp);
   try {

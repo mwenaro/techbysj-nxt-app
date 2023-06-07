@@ -1,4 +1,10 @@
+import { COMPANY_NAME, LOCATION, MAIN_EMAIL, PHONE_NUMBER } from '@/constants';
+import { strCapitalize } from '@/utlis';
+import { ContactForm } from '../organisms/form';
+
 export default function ContactSection() {
+  // const form = document.querySelectorAll('#contact_form');
+
   return (
     <section
       id="contact"
@@ -13,8 +19,8 @@ export default function ContactSection() {
               </h2>
               <p className="text-body-color mb-9 text-base leading-relaxed">
                 We strive to provide the best customer service and look forward
-                to hearing from you. Thank you for considering Nolojia for your
-                needs!
+                to hearing from you. Thank you for considering{' '}
+                {strCapitalize(COMPANY_NAME)} for your needs!
               </p>
               <div className="mb-8 flex w-full max-w-[370px]">
                 <div className="bg-primary text-primary mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-opacity-5 sm:h-[70px] sm:max-w-[70px]">
@@ -31,9 +37,7 @@ export default function ContactSection() {
                   <h4 className="text-dark mb-1 text-xl font-bold">
                     Our Location
                   </h4>
-                  <p className="text-body-color text-base">
-                    Ruiru Kenya near Rainbow Resort
-                  </p>
+                  <p className="text-body-color text-base">{LOCATION}</p>
                 </div>
               </div>
               <div className="mb-8 flex w-full max-w-[370px]">
@@ -54,7 +58,7 @@ export default function ContactSection() {
                   <h4 className="text-dark mb-1 text-xl font-bold">
                     Phone Number
                   </h4>
-                  <p className="text-body-color text-base">+254 717084877</p>
+                  <p className="text-body-color text-base">{PHONE_NUMBER}</p>
                 </div>
               </div>
               <div className="mb-8 flex w-full max-w-[370px]">
@@ -72,16 +76,14 @@ export default function ContactSection() {
                   <h4 className="text-dark mb-1 text-xl font-bold">
                     Email Address
                   </h4>
-                  <p className="text-body-color text-base">
-                    nolojiaschool@gmail.com
-                  </p>
+                  <p className="text-body-color text-base">{MAIN_EMAIL}</p>
                 </div>
               </div>
             </div>
           </div>
           <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
             <div className="relative rounded-lg bg-white p-8 shadow-lg sm:p-12">
-              <form>
+              {/* <form id="contact_form">
                 <div className="mb-6">
                   <input
                     type="text"
@@ -126,7 +128,8 @@ export default function ContactSection() {
                     Send Message
                   </button>
                 </div>
-              </form>
+              </form> */}
+              <ContactForm />
 
               <div>
                 <span className="absolute -top-10 -right-9 z-[-1]">

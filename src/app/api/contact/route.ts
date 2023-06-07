@@ -1,6 +1,6 @@
 import { getData, ref, db, saveData, get } from '@/libs/firebase';
 import { NextResponse } from 'next/server';
-const table = "courses"
+const table = "contact_form"
 
 export async function GET(request: Request) {
   const callBack = (payload: { data?: any; error?: any }) => {
