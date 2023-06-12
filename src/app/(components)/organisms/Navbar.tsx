@@ -31,7 +31,7 @@ export default function Navbar() {
             return (
               <li
                 key={link.href}
-                className="w-full md:w-fit hover:rounded-md hover:bg-slate-800"
+                className="w-full md:w-fit hover:rounded-md hover:bg-skin-primary hover:px-8 hover:py-4"
               >
                 <button className="bg-skin-primary text-white hover:bg-skin-accent    rounded-md p-3 px-6 w-full md:w-fit">
                   {link.title}
@@ -42,7 +42,7 @@ export default function Navbar() {
             return (
               <li
                 key={link.href}
-                className="w-full md:w-fit hover:rounded-md hover:bg-slate-800"
+                className="w-full md:w-fit hover:rounded-md hover:bg-skin-primary hover:px-8 hover:py-4"
               >
                 <ScrollLink
                   to={link.href}
@@ -58,7 +58,7 @@ export default function Navbar() {
           return (
             <li
               key={link.href}
-              className="w-full md:w-fit hover:rounded-md hover:bg-slate-800"
+              className="w-full md:w-fit hover:rounded-md hover:bg-skin-primary hover:px-8 hover:py-4"
             >
               <ScrollLink
                 to={link.href}

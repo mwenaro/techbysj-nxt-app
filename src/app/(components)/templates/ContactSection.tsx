@@ -2,6 +2,11 @@ import { COMPANY_NAME, LOCATION, MAIN_EMAIL, PHONE_NUMBER } from '@/constants';
 import { strCapitalize } from '@/utlis';
 import { ContactForm } from '../organisms/form';
 
+export const metadata = {
+  title: 'Techbysj - Contact page',
+  description: 'Sample page for the site',
+};
+
 export default function ContactSection() {
   // const form = document.querySelectorAll('#contact_form');
 

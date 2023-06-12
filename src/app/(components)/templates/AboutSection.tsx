@@ -1,4 +1,8 @@
 import { Img } from '../atoms';
+export const metadata = {
+  title: 'Techbysj - About page',
+  description: 'Sample page for the site',
+};
 
 export default function AboutSection() {
   return (
