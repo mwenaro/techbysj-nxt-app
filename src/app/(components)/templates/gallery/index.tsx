@@ -1,6 +1,7 @@
 
 import { SectionTitle, SectionWrapper } from '../../organisms';
-import Gallery from '../../organisms/Gallery';
+import Gallery2 from '../../organisms/Gallery2';
+import Gallery from '../../organisms/Gallery2';
 
 
 
@@ -17,7 +18,9 @@ const GallerySection: React.FC<GallerySectionProps> = ({ imageUrl }) => {
       {/* <SectionSubTitle className="text-center  text-black p-6">
         Imagine it, create it
       </SectionSubTitle> */}
-      <Gallery />
+      {/* <Gallery />
+       */}
+       <Gallery2 />
      
     </SectionWrapper>
   );

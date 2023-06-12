@@ -1,12 +1,12 @@
-import { IService } from '@/types';
+import { Service } from '@/types';
 import { SectionSubTitle, SectionTitle, SectionWrapper } from '../../organisms';
 import ServiceCard from './Servicecard';
-interface IServicesSectionProps {
+interface ServicesSectionProps {
   services?: any[];
   children?: React.ReactNode;
 }
 
-const ServicesSection: React.FC<IServicesSectionProps> = ({
+const ServicesSection: React.FC<ServicesSectionProps> = ({
   children,
   services,
 }) => (
@@ -24,7 +24,7 @@ const ServicesSection: React.FC<IServicesSectionProps> = ({
     <div className="grid gap-8 row-gap-10 lg:grid-cols-2">
       {services !== undefined && services.length > 0 ? (
         <>
-          {services.map((service: IService, indx: number) => (
+          {services.map((service: Service, indx: number) => (
             <ServiceCard key={indx} {...service} />
           ))}
         </>
