@@ -3,6 +3,7 @@ export interface Service {
   icon: React.ReactNode;
   description: string;
 }
+export interface Course extends Service {};
 
 export interface Image{
   src: string

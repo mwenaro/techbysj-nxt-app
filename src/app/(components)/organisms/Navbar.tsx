@@ -9,6 +9,7 @@ const navLinks: { title: string; href: string }[] = [
   { title: 'Services', href: 'services' },
   { title: 'Courses', href: 'courses' },
   { title: 'Contact', href: 'contact' },
+  { title: 'Gallery', href: 'gallery' },
   { title: 'Learn', href: 'learn' },
 ];
 
@@ -31,7 +32,7 @@ export default function Navbar() {
             return (
               <li
                 key={link.href}
-                className="w-full md:w-fit hover:rounded-md hover:bg-skin-primary hover:px-8 hover:py-4"
+                className="w-full md:w-fit hover:rounded-md "
               >
                 <button className="bg-skin-primary text-white hover:bg-skin-accent    rounded-md p-3 px-6 w-full md:w-fit">
                   {link.title}
@@ -42,7 +43,7 @@ export default function Navbar() {
             return (
               <li
                 key={link.href}
-                className="w-full md:w-fit hover:rounded-md hover:bg-skin-primary hover:px-8 hover:py-4"
+                className="w-full md:w-fit hover:rounded-md hover:bg-skin-primary hover:px-6 hover:py-3"
               >
                 <ScrollLink
                   to={link.href}
@@ -58,7 +59,7 @@ export default function Navbar() {
           return (
             <li
               key={link.href}
-              className="w-full md:w-fit hover:rounded-md hover:bg-skin-primary hover:px-8 hover:py-4"
+              className="w-full md:w-fit hover:rounded-md hover:bg-skin-primary hover:px-6 hover:py-3"
             >
               <ScrollLink
                 to={link.href}
