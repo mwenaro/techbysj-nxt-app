@@ -1,7 +1,7 @@
 'use client';
 import { Link as ScrollLink } from 'react-scroll';
 import { SITE_TAG_LINE, SITE_TILE } from '@/constants';
-import { Typography } from '../atoms';
+import { Img, Typography } from '../atoms';
 import { CTAButton } from '../molecules';
 import { getImage } from '@/assets/images';
 // import { ScrollLink } from 'react-scroll';
@@ -10,10 +10,12 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className=" w-full  hero-image bg-no-repeat bg-right object-fit"
-      style={{ backgroundImage: `url(${getImage('/binary.png')}})` }}
+      className=" w-full  hero-image bg-no-repeat bg-opacity-95 object-fit relative"
+      // style={{ backgroundImage: `url(${getImage('/binary.png')}})` }/}
+      style={{ backgroundImage: `url(/assets/images/logo.png)` }}
     >
-      <div className="bg-gradient-to-r from-skin-primary  w-full min-h-screen ">
+      {/* <Img src="/assets/images/16x9/6.jpg" alt=''/> */}
+      <div className="bg-gradient-to-r from-skin-primary  w-full min-h-screen bg-opacity-75 z-50">
         <div className="flex flex-col justify-center  items-center w-full  md:w-3/4 ">
           <Typography
             variant="h1"
