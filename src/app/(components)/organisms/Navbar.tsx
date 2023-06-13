@@ -41,7 +41,7 @@ export default function Navbar() {
             return (
               <li
                 key={link.href}
-                className="w-full md:w-fit hover:rounded-md hover:bg-skin-primary hover:px-6 hover:py-3"
+                className="w-full md:w-fit hover:rounded-md hover:bg-skin-accent hover:text-white px-6 py-3"
               >
                 <ScrollLink
                   to={link.href}
@@ -57,7 +57,7 @@ export default function Navbar() {
           return (
             <li
               key={link.href}
-              className="w-full md:w-fit hover:rounded-md hover:bg-skin-primary hover:px-6 hover:py-3"
+              className="w-full md:w-fit hover:rounded-md hover:bg-skin-accent hover:text-white px-6 py-3"
             >
               <ScrollLink
                 to={link.href}
