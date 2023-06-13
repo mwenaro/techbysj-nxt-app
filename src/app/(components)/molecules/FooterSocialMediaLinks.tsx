@@ -71,8 +71,8 @@ const FooterSocialMediaLinks: React.FC<
             </svg>
           </a>
           <a
-            // href="https://www.youtube.com/@nolojia6079"
-            href="#"
+            href="https://www.youtube.com/@techbysjke"
+            // href="#"
             className="text-white transition-colors duration-300 hover:text-deep-purple-accent-400"
           >
             <svg
