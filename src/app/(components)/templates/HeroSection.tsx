@@ -17,7 +17,7 @@ export default function HeroSection() {
         <div className="flex flex-col justify-center  items-center w-full  md:w-3/4 ">
           <Typography
             variant="h1"
-            className="text-2xl md:text-4xl  md:leading-[8rem] leading-[5rem] w-full md:max-w-fit  text-center font-bold text-slate-50 md:pt-48 pt-32 px-8"
+            className="text-2xl md:text-7xl  md:leading-[8rem] leading-[5rem] w-full md:max-w-fit  text-center font-bold text-slate-50 md:pt-48 pt-32 px-8"
           >
             Unlocking  
             {/* {SITE_TILE} {' '} */}

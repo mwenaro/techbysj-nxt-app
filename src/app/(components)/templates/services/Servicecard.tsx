@@ -19,7 +19,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       <Typography variant="h6" className="mb-3 text-xl font-bold leading-5">
         {title}
       </Typography>
-      <Typography variant="p" className="mb-3 text-sm text-gray-900">
+      <Typography variant="p" className="mb-3 text-sm text-gray-900 first-letter:uppercase">
         {description}
       </Typography>
       <a
