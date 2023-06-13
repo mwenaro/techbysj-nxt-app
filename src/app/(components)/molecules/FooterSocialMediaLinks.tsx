@@ -38,7 +38,7 @@ const FooterSocialMediaLinks: React.FC<
         </span>
         <div className="flex items-center mt-1 space-x-3">
           <a
-            href="https://www.tiktok.com/@_nolojia"
+            href="https://www.tiktok.com/@techbysjke"
             className="text-white transition-colors duration-300 hover:text-deep-purple-accent-400"
           >
             <svg
@@ -54,7 +54,7 @@ const FooterSocialMediaLinks: React.FC<
             </svg>
           </a>
           <a
-            href="https://www.instagram.com/_nolojia/"
+            href="https://www.instagram.com/TECHBYSJke/"
             className="text-white transition-colors duration-300 hover:text-deep-purple-accent-400"
           >
             <svg viewBox="0 0 30 30" fill="currentColor" className="h-6">
@@ -63,7 +63,7 @@ const FooterSocialMediaLinks: React.FC<
             </svg>
           </a>
           <a
-            href="https://web.facebook.com/nolojia?_rdc=1&amp;_rdr"
+            href="https://web.facebook.com/Techbysjke"
             className="text-white transition-colors duration-300 hover:text-deep-purple-accent-400"
           >
             <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
@@ -71,7 +71,8 @@ const FooterSocialMediaLinks: React.FC<
             </svg>
           </a>
           <a
-            href="https://www.youtube.com/@nolojia6079"
+            // href="https://www.youtube.com/@nolojia6079"
+            href="#"
             className="text-white transition-colors duration-300 hover:text-deep-purple-accent-400"
           >
             <svg

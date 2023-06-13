@@ -12,3 +12,7 @@ export const TWEETER_HANDLE = '';
 export const lINKEDIN_HANDLE = '';
 export const YOUTUBE_HANDLE = '';
 export const TIKTOK_HANDLE = '';
+
+
+export  const SITE_TILE = "Unlocking Africa's Potential Trough Technology"
+export const SITE_TAG_LINE = ""
