@@ -2,6 +2,7 @@
 import { Link as ScrollLink } from 'react-scroll';
 
 import { Logo } from '../molecules';
+import { Typography } from '../atoms';
 
 const navLinks: { title: string; href: string }[] = [
   { title: 'Home', href: 'home' },
@@ -23,17 +24,14 @@ export default function Navbar() {
         duration={500}
         offset={-70} // Adjust the offset as needed to account for fixed headers or other elements
       >
-        <Logo />
+        <Logo /> <Typography variant="h1">TechBySj </Typography>
       </ScrollLink>
 
       <ul className="w-full md:w-fit flex flex-col md:flex-row items-center gap-5 md:gap-10 bg-inherit p-4 mb-5 sm:mb-0">
         {navLinks.map((link, indx) => {
           if (indx === navLinks.length - 1)
             return (
-              <li
-                key={link.href}
-                className="w-full md:w-fit hover:rounded-md "
-              >
+              <li key={link.href} className="w-full md:w-fit hover:rounded-md ">
                 <button className="bg-skin-primary text-white hover:bg-skin-accent    rounded-md p-3 px-6 w-full md:w-fit">
                   {link.title}
                 </button>

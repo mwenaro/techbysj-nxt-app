@@ -1,9 +1,10 @@
 'use client';
-
+import { Link as ScrollLink } from 'react-scroll';
 import { SITE_TAG_LINE, SITE_TILE } from '@/constants';
 import { Typography } from '../atoms';
 import { CTAButton } from '../molecules';
 import { getImage } from '@/assets/images';
+// import { ScrollLink } from 'react-scroll';
 
 export default function HeroSection() {
   return (
@@ -18,8 +19,11 @@ export default function HeroSection() {
             variant="h1"
             className="md:text-8xl text-5xl md:leading-[8rem] leading-[5rem] w-full md:max-w-fit  text-center font-bold text-slate-50 md:pt-48 pt-32 px-8"
           >
-            {SITE_TILE} {' '}
+            Unlocking  
+            {/* {SITE_TILE} {' '} */}
+
             {/* <span className="text-skin-accent   ">reality </span> */}
+            <span className="text-skin-accent bg-black/20 p-2 m-2">Africa&apos;s Potential </span> Trough Technology
           </Typography>
           <Typography
             variant="h2"
@@ -31,11 +35,20 @@ export default function HeroSection() {
           </Typography>
 
           <CTAButton
-            onClick={() => alert('Hello')}
+            // onClick={() => alert('Hello')}
             className="
           w-60 text-slate-50 font-bold  text-2xl bg-skin-accent    md:mt-24 my-10"
           >
-            Get In Touch
+            <ScrollLink 
+            to = {'contact'}
+            duration = {500}
+            offset = {-70}
+            smooth= {true}
+            
+            >
+             Get In Touch 
+            </ScrollLink>
+            
           </CTAButton>
         </div>
       </div>

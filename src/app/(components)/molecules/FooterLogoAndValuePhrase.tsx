@@ -11,7 +11,7 @@ const FooterLogoAndValuePhrase: React.FC<
   PropsWithChildren<FooterLogoAndValuePhraseProps>
 > = ({
   children,
-  value_phrase = 'Ulock your business potential with techbysk. Reach out to  us now to Explore Endless Possibilities!.',
+  value_phrase = 'Unlock your potential through technology. Reach out to  us now to Explore Endless Possibilities!.',
   className,
 }) => (
   <div className={`sm:col-span-2 ${className}`}>
