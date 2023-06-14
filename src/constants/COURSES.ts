@@ -31,10 +31,10 @@ export const OUR_COURSES = [
       'Do you want to manage businesses through marketing digitally? Our digital marketting course will give you the knowledge and skill needed to market online.',
     icon: 'marketing',
   },
-  {
-    title: 'Robotics',
-    description:
-      'Do you want to learn robotics? We help you learn how to code and build your first robots for successful careers in hi-tech fields.',
-    icon: 'dataTrend',
-  },
+  // {
+  //   title: 'Robotics',
+  //   description:
+  //     'Do you want to learn robotics? We help you learn how to code and build your first robots for successful careers in hi-tech fields.',
+  //   icon: 'dataTrend',
+  // },
 ];

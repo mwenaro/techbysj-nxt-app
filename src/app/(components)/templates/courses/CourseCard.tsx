@@ -1,4 +1,4 @@
-import { Icon, Typography } from '../../atoms';
+import { Button, Icon, Typography } from '../../atoms';
 
 interface CourseCardProps {
   icon?: React.ReactNode | string;
@@ -24,12 +24,13 @@ const CourseCard: React.FC<CourseCardProps> = ({
       <Typography variant="p" className="mb-3 text-sm text-gray-900">
         {description}
       </Typography>
+      
       <a
         aria-label=""
-        className="btn-services inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
+        // className="btn-services inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
         href="/#contact"
       >
-        Learn more
+        <Button  className='hover:bg-skin-accent'>Book Now</Button>
       </a>
     </div>
   );

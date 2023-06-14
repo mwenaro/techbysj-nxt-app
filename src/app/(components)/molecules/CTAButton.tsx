@@ -15,13 +15,14 @@ const CTAButton: React.FC<CTAButtonProps> = ({
   disabled,
   className,
 }) => (
-  <Button
-    className={`bg-skin-accent     ${className}`}
+  <button
+  className={` bg-skin-accent text-white font-bold p-4 px-8 rounded hover:border-2 hover:border-white  hover:border-solid hover:rounded text-base ${className}`}
+
     onClick={onClick}
     disabled={disabled}
   >
     {children}
-  </Button>
+  </button>
 );
 
 export default CTAButton;

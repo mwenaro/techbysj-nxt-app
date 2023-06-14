@@ -16,7 +16,7 @@ export default function HeroSection() {
     >
       {/* <Img src="/assets/images/16x9/6.jpg" alt=''/> */}
       <div className="bg-gradient-to-r from-skin-primary  w-full min-h-screen bg-opacity-75 z-50">
-        <div className="flex flex-col justify-center  items-center w-full  md:w-3/4 ">
+        <div className="flex flex-col justify-center  items-center w-full  md:w-1/2 ">
           <Typography
             variant="h1"
             className="text-2xl md:text-7xl  md:leading-[8rem] leading-[5rem] w-full md:max-w-fit  text-center font-bold text-slate-50 md:pt-48 pt-32 px-8"
@@ -39,9 +39,10 @@ export default function HeroSection() {
           <CTAButton
             // onClick={() => alert('Hello')}
             className="
-          w-60 text-slate-50 font-bold  text-2xl bg-skin-accent    md:mt-24 my-10"
+          w-60 text-slate-50 font-bold  text-2xl hover:bg-skin-accent     md:mt-24 my-10"
           >
             <ScrollLink 
+            
             to = {'contact'}
             duration = {500}
             offset = {-70}
