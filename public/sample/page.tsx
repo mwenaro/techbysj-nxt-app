@@ -1,15 +1,15 @@
-import React from 'react';
-import { CoursesSection, HeroSection } from '../(components)';
-import AboutSection from '../(components)/templates/about';
-import ServicesSection from '../(components)/templates/services';
-import { ABOUT_SECTION_IMAGE } from '@/assets/images';
-import { OUR_SERVICES } from '@/constants/SERVICES';
-import GallerySection from '../(components)/templates/gallery';
+import { HeroSection } from '@/app/(components)'
+import AboutSection from '@/app/(components)/templates/about'
+import CoursesSection from '@/app/(components)/templates/courses'
+import GallerySection from '@/app/(components)/templates/gallery'
+import ServicesSection from '@/app/(components)/templates/services'
+import { ABOUT_SECTION_IMAGE } from '@/assets/images'
+import { OUR_SERVICES } from '@/constants/SERVICES'
 
 export const metadata = {
   title: 'Techbysj - Sample page',
-  description: 'Sample page for the site',
-};
+  description: 'Sample page for the site'
+}
 
 export default function page() {
   return (
@@ -22,5 +22,5 @@ export default function page() {
       <CoursesSection />
       <GallerySection />
     </>
-  );
+  )
 }
