@@ -10,8 +10,9 @@ export interface IToastSettings {
 const default_settings ={
   className: 'content-fit',
   // position: toast.POSITION.TOP_RIGHT,
-  position: toast.POSITION.TOP_CENTER,
+  position: toast.POSITION.BOTTOM_CENTER,
   autoClose: 60000,
+  zIndex:100
 }
 // export default function useToastify() {
   const _Toast = (cb: any, msg: string, settings: IToastSettings = default_settings) =>

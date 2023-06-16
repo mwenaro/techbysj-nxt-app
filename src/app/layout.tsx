@@ -1,3 +1,4 @@
+import { ToastContainer } from 'react-toastify';
 import { Footer, Header } from './(components)';
 import './globals.css';
 
@@ -39,12 +40,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="techby-theme">
-        <div className="">
+        <div >
           <Header />
           <main className="flex min-h-screen flex-col items-center justify-between p-2">
             {children}
           </main>
-
           <Footer />
         </div>
       </body>

@@ -2,7 +2,7 @@
 import { Link as ScrollLink } from 'react-scroll';
 
 import { Logo } from '../molecules';
-import { Typography } from '../atoms';
+import { Img, Typography } from '../atoms';
 import { boolean } from 'yup';
 import { useState } from 'react';
 
@@ -33,7 +33,11 @@ function handleNavToggle() {
         offset={-70} // Adjust the offset as needed to account for fixed headers or other elements
       >
         <Logo className='mr-2'/> 
-        <Typography variant="h1" className='pl-2 ml-0 md:text-3xl z-50'>TechBySj </Typography>
+        <span className='z-50'>
+
+        <Img src="/assets/site_title.png" alt ="Techbysj"/>
+        </span>
+        {/* <Typography variant="h1" className='pl-2 ml-0 md:text-3xl z-50'>TechBySj </Typography> */}
       </ScrollLink>
 
       <ul className="hidden w-full md:w-fit md:flex flex-col md:flex-row items-center gap-5 md:gap-10 bg-inherit p-4 mb-5 sm:mb-0">

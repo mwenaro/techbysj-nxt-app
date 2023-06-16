@@ -2,7 +2,7 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import { errorToast, successToast } from '../toast';
+import { ToastContainer, errorToast, successToast } from '../toast';
 
 interface ContactFormValues {
   clientName: string;
@@ -28,10 +28,14 @@ const ContactForm: React.FC = () => {
 
   const handleSubmit = async (
     values: ContactFormValues,
-    { setSubmitting }: { setSubmitting: (isSubmitting: boolean) => void }
+
+    {
+      setSubmitting,
+      resetForm,
+    }: { setSubmitting: (isSubmitting: boolean) => void; resetForm: () => void }
   ) => {
     // Handle form submission logic here
-    console.log(values);
+    // console.log(values);
     try {
       let res = await fetch('/api/contact/form', {
         method: 'POST',
@@ -41,6 +45,7 @@ const ContactForm: React.FC = () => {
       let data: any = await res.json();
       // alert("Form submitted successfully")
       successToast('Form successfully submitted');
+      resetForm();
       console.log({ data });
     } catch (error) {
       errorToast('Something went wrong, check your data and try again');
@@ -113,6 +118,7 @@ const ContactForm: React.FC = () => {
             Send Message
           </button>
         </div>
+        <ToastContainer></ToastContainer>
       </Form>
     </Formik>
   );

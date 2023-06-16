@@ -1,7 +1,7 @@
 import { sendConfirmationEmail } from '@/libs';
 import { getData, ref, db, saveData, get } from '@/libs/firebase';
 import { NextResponse } from 'next/server';
-const table = "courses"
+const table = 'courses';
 
 export async function GET(request: Request) {
   const callBack = (payload: { data?: any; error?: any }) => {
@@ -9,11 +9,7 @@ export async function GET(request: Request) {
       ? { data: payload.data }
       : { error: payload.error };
     return NextResponse.json(result);
-   
-
   };
-  
-  
 
   let resp = await getData(table, callBack);
   return NextResponse.json(resp);
@@ -39,8 +35,8 @@ export async function POST(request: Request) {
     let body = await request.json();
     let res = await saveData(table, body);
 
-    sendConfirmationEmail(body.email, body.clientName,"Enquiries")
-    return NextResponse.json({ msg: 'Successfully added id => ' + res });
+    let p = await sendConfirmationEmail(body.email, body.clientName, 'Enquiries');
+    return NextResponse.json({ msg: 'Successfully added id => ' + res , p});
   } catch (error: any) {
     console.log({ error: error.message });
     NextResponse.json({ error: error.message });
