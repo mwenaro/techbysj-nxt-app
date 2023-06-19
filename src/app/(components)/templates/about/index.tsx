@@ -22,16 +22,16 @@ const AboutSection: React.FC<AboutSectionProps> = ({ imageUrl }) => {
         opportunities for underserved communities to thrive in the digital age.
       </Typography>
      
-      <div className="w-full flex flex-col md:flex-row py-4  md:gap-2">
+      <div className="w-full flex flex-col py-4  md:gap-2">
         <Mission
-          className=" w-full md:w-1/2 mt-2 px-2 py-4"
-          title="Our mission"
+          className=" w-full flex flex-col sm:flex-row justify-center items-center"
+          title="Our Mission"
           // icon={<Icon variant="arrowRight" />}
           description="A daily commitment to serve our clients through passion, knowledge, and excellence."
         />
         <Mission
-          className=" w-full md:w-1/2"
-          title="Our vision"
+          className=" w-full flex flex-col sm:flex-row justify-center items-center"
+          title="Our Vision"
           // icon={<Icon variant="arrowRight" />}
           description="To be known and recommended for optimizing and streamlining businesses by using digital and technical innovation."
         />
