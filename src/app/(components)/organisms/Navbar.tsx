@@ -20,9 +20,18 @@ const generatedLinks = navLinks.map((link, indx) => {
   if (indx === navLinks.length - 1)
     return (
       <li key={link.href} className="w-full md:w-fit hover:rounded-md ">
-        <button className="bg-skin-primary text-white hover:bg-skin-accent    rounded-md p-3 px-6 w-full md:w-fit">
-          {link.title}
-        </button>
+         <ScrollLink
+          to={'contact'}
+          smooth={true}
+          duration={500}
+          offset={-70} // Adjust the offset as needed to account for fixed headers or other elements
+          className="bg-skin-primary text-white hover:bg-skin-accent    rounded-md p-3 px-6 w-full md:w-fit"
+        >
+{link.title}
+        </ScrollLink>
+        {/* <button className="bg-skin-primary text-white hover:bg-skin-accent    rounded-md p-3 px-6 w-full md:w-fit">
+          
+        </button> */}
       </li>
     );
   if (link.title.toLocaleLowerCase().split(' ').includes('about'))
