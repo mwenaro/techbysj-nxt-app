@@ -77,13 +77,13 @@ export default function Navbar() {
         duration={500}
         offset={-70} // Adjust the offset as needed to account for fixed headers or other elements
       >
-        <Logo className="mr-2"  altSrc='/assets/images/logo_with_text.png'/>
+        <Logo className="mr-2 min-w-[150px]"  altSrc='/assets/images/logo_with_text.png'/>
         
         {/* <Typography variant="h1" className='pl-2 ml-0 md:text-3xl z-50'>TechBySj </Typography> */}
       </ScrollLink>
 
       {/* Midium to large screen navigation */}
-      <ul className="hidden w-full md:w-fit md:flex flex-col md:flex-row items-center gap-5 md:gap-10 bg-inherit p-4 mb-5 sm:mb-0">
+      <ul className="hidden w-full md:w-fit md:flex flex-col md:flex-row items-center bg-inherit mb-5 sm:mb-0">
         {generatedLinks}
       </ul>
 
@@ -96,7 +96,7 @@ export default function Navbar() {
         {generatedLinks}
       </ul>
 
-      <div className="lg:hidden absolute top-4 right-4 z-50">
+      <div className="md:hidden absolute top-4 right-4 z-50">
         <button
           aria-label="Open Menu"
           title="Open Menu"
