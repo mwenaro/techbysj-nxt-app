@@ -19,7 +19,7 @@ const navLinks: { title: string; href: string }[] = [
 const generatedLinks = navLinks.map((link, indx) => {
   if (indx === navLinks.length - 1)
     return (
-      <li key={link.href} className="w-full md:w-fit hover:rounded-md ">
+      <li key={link.href} className="w-full md:w-fit hover:rounded-md mx-2">
          <ScrollLink
           to={'contact'}
           smooth={true}
