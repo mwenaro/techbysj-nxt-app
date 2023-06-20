@@ -9,7 +9,7 @@ interface AboutSectionProps {
 
 const AboutSection: React.FC<AboutSectionProps> = ({ imageUrl }) => {
   return (
-    <SectionWrapper sectionId="about" className='max-w-[1000px]'>
+    <SectionWrapper sectionId="about" className="max-w-[1000px]">
       <SectionTitle className="text-center text-4xl p-2 md:p-10 ">
         About us
       </SectionTitle>
@@ -21,8 +21,8 @@ const AboutSection: React.FC<AboutSectionProps> = ({ imageUrl }) => {
         organization strives to bridge the digital divide and create
         opportunities for underserved communities to thrive in the digital age.
       </Typography>
-     
-      <div className="w-full flex flex-col py-4  md:gap-2">
+
+      <div className="w-full flex flex-col py-2 md:py-4 md:gap-4">
         <Mission
           className=" w-full flex flex-col sm:flex-row justify-center items-center"
           title="Our Mission"
@@ -36,6 +36,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ imageUrl }) => {
           description="To be known and recommended for optimizing and streamlining businesses by using digital and technical innovation."
         />
       </div>
+      <p className="mb-20"></p>
     </SectionWrapper>
   );
 };

@@ -2,50 +2,48 @@
 import { Link as ScrollLink } from 'react-scroll';
 
 import { Logo } from '../molecules';
-import { Img, Typography } from '../atoms';
-import { boolean } from 'yup';
+
 import { useState } from 'react';
+const linkItemStyles = ` w-full md:w-fit rounded-md hover:bg-skin-primary hover:text-white px-6 py-3 `
 
 const navLinks: { title: string; href: string }[] = [
   { title: 'Home', href: 'home' },
   { title: 'About us', href: 'about' },
+  { title: 'Our Activities', href: 'gallery' },
   { title: 'Services', href: 'services' },
   { title: 'Courses', href: 'courses' },
   { title: 'Contact', href: 'contact' },
-  { title: 'Gallery', href: 'gallery' },
-  { title: 'Learn', href: 'learn' },
+  { title: 'Learn', href: 'booking' },
 ];
 
 const generatedLinks = navLinks.map((link, indx) => {
   if (indx === navLinks.length - 1)
     return (
       <li key={link.href} className="w-full md:w-fit hover:rounded-md mx-2">
-         <ScrollLink
-          to={'contact'}
+        <ScrollLink
+          // to={'contact'}
+          to={link.href}
           smooth={true}
           duration={500}
           offset={-70} // Adjust the offset as needed to account for fixed headers or other elements
-          className="bg-skin-primary text-white hover:bg-skin-accent    rounded-md p-3 px-6 w-full md:w-fit"
+          className={`bg-skin-accent text-white font-bold uppercase  ${linkItemStyles} hover:bg-skin-primary`}
         >
-{link.title}
+          {link.title}
         </ScrollLink>
-        {/* <button className="bg-skin-primary text-white hover:bg-skin-accent    rounded-md p-3 px-6 w-full md:w-fit">
-          
-        </button> */}
       </li>
     );
   if (link.title.toLocaleLowerCase().split(' ').includes('about'))
     return (
       <li
         key={link.href}
-        // className="w-full md:w-fit hover:rounded-md hover:bg-skin-accent hover:text-white px-6 py-3"
       >
         <ScrollLink
           to={link.href}
           smooth={true}
           duration={500}
           offset={-70} // Adjust the offset as needed to account for fixed headers or other elements
-          className="w-full md:w-fit hover:rounded-md hover:bg-skin-accent hover:text-white px-6 py-3"
+          // className="w-full md:w-fit hover:rounded-md hover:bg-skin-accent hover:text-white px-6 py-3"
+          className={linkItemStyles}
         >
           <span>{link.title.split(' ')[0]}</span>
         </ScrollLink>
@@ -55,14 +53,14 @@ const generatedLinks = navLinks.map((link, indx) => {
   return (
     <li
       key={link.href}
-      // className="w-full md:w-fit hover:rounded-md hover:bg-skin-accent hover:text-white px-6 py-3"
     >
       <ScrollLink
         to={link.href}
         smooth={true}
         duration={500}
         offset={-70} // Adjust the offset as needed to account for fixed headers or other elements
-        className="w-full md:w-fit hover:rounded-md hover:bg-skin-accent hover:text-white px-6 py-3"
+        // className="w-full md:w-fit hover:rounded-md hover:bg-skin-accent hover:text-white px-6 py-3"
+        className={linkItemStyles}
       >
         <span>{link.title}</span>
       </ScrollLink>
@@ -86,8 +84,11 @@ export default function Navbar() {
         duration={500}
         offset={-70} // Adjust the offset as needed to account for fixed headers or other elements
       >
-        <Logo className="mr-2 min-w-[150px]"  altSrc='/assets/images/logo_with_text.png'/>
-        
+        <Logo
+          className="mr-2 min-w-[150px]"
+          altSrc="/assets/images/logo_with_text.png"
+        />
+
         {/* <Typography variant="h1" className='pl-2 ml-0 md:text-3xl z-50'>TechBySj </Typography> */}
       </ScrollLink>
 
