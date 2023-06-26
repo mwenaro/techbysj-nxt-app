@@ -10,8 +10,7 @@ interface CourseCardProps {
 }
 
 const CourseCard: React.FC<CourseCardProps> = ({
-  enrollmentLink,
-  icon,
+    icon,
   title,
   description,
 }) => {
@@ -33,17 +32,10 @@ const CourseCard: React.FC<CourseCardProps> = ({
           smooth={true}
           duration={500}
           offset={-70} // Adjust the offset as needed to account for fixed headers or other elements
-          // className={`bg-skin-accent text-white font-bold uppercase  ${linkItemStyles} hover:bg-skin-primary`}
         >
           <Button  className='hover:bg-skin-accent'>Book Now</Button>
         </ScrollLink>
-      {/* <a
-        aria-label=""
-        // className="btn-services inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
-        href="/#booking"
-      >
-        <Button  className='hover:bg-skin-accent'>Book Now</Button>
-      </a> */}
+     
     </div>
   );
 };

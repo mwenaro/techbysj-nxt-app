@@ -81,7 +81,7 @@ const sendConfirmationEmail = async (
   </body>
 </html>
 `;
-  let info1;
+  let info;
   try {
     // Create a nodemailer transport object
     const transporter = nodemailer.createTransport({
@@ -100,7 +100,8 @@ const sendConfirmationEmail = async (
 
     // Define the email message
     const message = {
-      from: "hello@techbysj.ke", // Use your domain email address as the sender
+      // from: "hello@techbysj.ke", // Use your domain email address as the sender
+      from: process.env.NEXT_PUBLIC_EMAIL_USER, // Use your domain email address as the sender
       to,
       // bcc:process.env.NEXT_PUBLIC_EMAIL_USER,
       subject,
@@ -108,12 +109,12 @@ const sendConfirmationEmail = async (
     };
 
     // Send the email
-    const info = (info1 = await transporter.sendMail(message));
+    info =  await transporter.sendMail(message);
     console.log(`Email sent to ${to}: ${info.response}`);
     return { ...result, flag: true, info };
   } catch (error: any) {
     console.log(error.message);
-    return { ...result, error: error.message, info1, flag: false };
+    return { ...result, error: error.message, info, flag: false };
   }
 };
 
