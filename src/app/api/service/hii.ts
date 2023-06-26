@@ -3,7 +3,8 @@ const puppeteer = require('puppeteer');
 const path = require('path');
 
 export const generatePDF = async (
-  host: string = 'http://localhost:3000'
+  host: string = 'http://localhost:3000',
+  cb:any = null
 ) => {
   try {
     const browser = await puppeteer.launch();
@@ -17,7 +18,7 @@ export const generatePDF = async (
 
     const refNo = '3424';
     const date = '14th June, 2023';
-    const name = 'Name HERE';
+    const name = 'Mohammad Abdalla';
 
     let data = {
       '{{refNo}}': refNo,
@@ -46,7 +47,7 @@ export const generatePDF = async (
     });
 
     await browser.close();
-    let f = await fs.readFile(file);
+    // let f = await fs.readFile(file);
     console.log('PDF created successfully');
     
   } catch (error) {

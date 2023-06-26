@@ -14,7 +14,8 @@ export default function HeroSection() {
       className=" w-full  mt-50 md:mt-10 h-screen  "
       
     >
-      <BannerImage imageSrc="/assets/images/16x9/6.jpg" className="">
+      {/* <BannerImage imageSrc="/assets/images/16x9/6.jpg" className=""> */}
+      <BannerImage imageSrc="/assets/images/hero_image.jpeg" className="">
         <div className="bg-gradient-to-r from-skin-primary  w-full h-full bg-transparent z-50">
           <div className="flex flex-col justify-center  items-center w-full  md:w-1/2 ">
             <Typography

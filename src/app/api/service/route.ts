@@ -4,9 +4,9 @@ import { NextResponse } from 'next/server';
 import { generatePDF } from './hii';
 
 export async function GET(req: Request) {
-  // const reternData: =({ error, doc   }: );
+  
   let host = req.url.split('/api/')[0];
-  await generatePDF(host);
+  await generatePDF(host,async()=>console.log("Hello world"));
 
  return NextResponse.json({ msg: host });
 
