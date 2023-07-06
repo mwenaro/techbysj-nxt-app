@@ -1,12 +1,12 @@
 import { getData, ref, db, saveData, get } from '@/libs/firebase';
 
 import { NextResponse } from 'next/server';
-import { generatePDF } from './hii';
+// import { generatePDF } from './hii';
 
 export async function GET(req: Request) {
   
   let host = req.url.split('/api/')[0];
-  await generatePDF(host,async()=>console.log("Hello world"));
+  // await generatePDF(host,async()=>console.log("Hello world"));
 
  return NextResponse.json({ msg: host });
 
