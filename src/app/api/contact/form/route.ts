@@ -1,6 +1,6 @@
 import { sendConfirmationEmail } from '@/libs';
 import { getData, ref, db, saveData, get } from '@/libs/firebase';
-import { sendTestEmail } from '@/libs/nodemailer/email2';
+import { sendTestEmail } from '@/libs/nodemailer/gmail';
 import { NextResponse } from 'next/server';
 const table = 'courses';
 
