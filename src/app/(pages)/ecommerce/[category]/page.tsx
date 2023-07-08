@@ -1,5 +1,3 @@
-
-
 export default function MainContent({params:{category}}:{params:{category:string}}) {
     console.log({category})
   return (

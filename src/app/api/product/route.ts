@@ -1,21 +1,17 @@
 import { getData, ref, db, saveData, get } from '@/libs/firebase';
-
+import { products } from '@/utlis';
 import { NextResponse } from 'next/server';
-import { generatePDF } from './hii';
+const table = 'products';
 
-export async function GET(req: Request) {
-  
-  let host = req.url.split('/api/')[0];
-  await generatePDF(host,async()=>console.log("Hello world"));
-
- return NextResponse.json({ msg: host });
-
+export async function GET(request: Request) {
+  return NextResponse.json(products);
 }
+
 
 export async function POST(request: Request) {
   try {
     let body = await request.json();
-    let res = await saveData('events', body);
+    let res = await saveData(table, body);
     return NextResponse.json({ msg: 'Successfully added id => ' + res });
   } catch (error: any) {
     console.log({ error: error.message });
