@@ -1,15 +1,19 @@
 import { getData, ref, db, saveData, get } from '@/libs/firebase';
+import { receiptGen } from '@/libs/pdf';
 
 import { NextResponse } from 'next/server';
-import { generatePDF } from './hii';
 
-export async function GET(req: Request) {
+export async function GET(request: Request) {
+    // Example usage
+const receiptId = 'ABC123';
+const date = '2023-06-21';
+const details = 'Product details...';
+
+await receiptGen({"{{receiptId}}":receiptId, "{{date}}": date,"{{name}}":"Mwero Abdalla"});
   
-  let host = req.url.split('/api/')[0];
-  await generatePDF(host,async()=>console.log("Hello world"));
-
- return NextResponse.json({ msg: host });
-
+  return NextResponse.json({msg:"reecipts"});
+  
+  
 }
 
 export async function POST(request: Request) {

@@ -1,3 +1,5 @@
+"use client"
+import { Link as ScrollLink } from 'react-scroll';
 import { Button, Icon, Typography } from '../../atoms';
 
 interface CourseCardProps {
@@ -8,8 +10,7 @@ interface CourseCardProps {
 }
 
 const CourseCard: React.FC<CourseCardProps> = ({
-  enrollmentLink,
-  icon,
+    icon,
   title,
   description,
 }) => {
@@ -25,13 +26,16 @@ const CourseCard: React.FC<CourseCardProps> = ({
         {description}
       </Typography>
       
-      <a
-        aria-label=""
-        // className="btn-services inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
-        href="/#contact"
-      >
-        <Button  className='hover:bg-skin-accent'>Book Now</Button>
-      </a>
+      <ScrollLink
+          to={'booking'}
+          // to={link.href}
+          smooth={true}
+          duration={500}
+          offset={-70} // Adjust the offset as needed to account for fixed headers or other elements
+        >
+          <Button  className='hover:bg-skin-accent'>Book Now</Button>
+        </ScrollLink>
+     
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import { sendConfirmationEmail } from '@/libs';
 import { getData, ref, db, saveData, get } from '@/libs/firebase';
+import { sendTestEmail } from '@/libs/nodemailer/email2';
 import { NextResponse } from 'next/server';
 const table = 'courses';
 
@@ -32,14 +33,17 @@ export async function GET(request: Request) {
 
 export async function POST(request: Request) {
   try {
-    let body = await request.json();
+    let body = await request.json(),
+      { email, clientName } = body;
     let res = await saveData(table, body);
 
-    let p = await sendConfirmationEmail(body.email, body.clientName, 'Enquiries');
-    return NextResponse.json({ msg: 'Successfully added id => ' + res , p});
+    // return NextResponse.json({ body });
+    // let p = await sendConfirmationEmail(email, clientName, 'Enquiries');
+    let p = await sendTestEmail(email,"Enquiries", "Hello there");
+    return NextResponse.json({ msg: 'Successfully added id => ' + res, p });
   } catch (error: any) {
     console.log({ error: error.message });
-    NextResponse.json({ error: error.message });
-    return false;
+    return NextResponse.json({ error: error.message });
+    // return false;
   }
 }

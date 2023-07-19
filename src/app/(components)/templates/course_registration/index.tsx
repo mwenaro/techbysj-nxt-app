@@ -40,6 +40,7 @@ const RegistrationForm: React.FC = () => {
   const handleSubmit = (values: FormValues) => {
     // Handle form submission logic here
     console.log(values);
+    
   };
 
   return (

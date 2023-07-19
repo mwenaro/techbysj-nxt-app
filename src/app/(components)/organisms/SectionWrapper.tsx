@@ -13,7 +13,7 @@ export default function SectionWrapper({
   return (
     <section
       id={sectionId}
-      className={`w-full min-h-screen relative my-10 ${className}`}
+      className={`w-full   md:min-h-screen relative my-10 ${className}`}
     >
       {children}
     </section>

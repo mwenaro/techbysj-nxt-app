@@ -14,12 +14,13 @@ export default function HeroSection() {
       className=" w-full  mt-50 md:mt-10 h-screen  "
       
     >
-      <BannerImage imageSrc="/assets/images/16x9/6.jpg">
+      {/* <BannerImage imageSrc="/assets/images/16x9/6.jpg" className=""> */}
+      <BannerImage imageSrc="/assets/images/hero_image.jpeg" className="">
         <div className="bg-gradient-to-r from-skin-primary  w-full h-full bg-transparent z-50">
           <div className="flex flex-col justify-center  items-center w-full  md:w-1/2 ">
             <Typography
               variant="h1"
-              className="text-2xl md:text-6xl   w-full md:max-w-fit font-bold text-slate-50 md:pt-20 mt-20 px-8"
+              className="text-xl md:text-6xl   w-full md:max-w-fit font-bold text-slate-50 md:pt-20 mt-20 px-8"
             >
               <p className="w-full p-2">Unlocking</p>
 
